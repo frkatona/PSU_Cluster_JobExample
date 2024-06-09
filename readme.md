@@ -16,6 +16,7 @@ Each needs uploaded to the cluster through the portal to submit the job.  Step-b
 
 ## Usage
 
+0. Request an account on the Roar Collab HPC with the online form (it will request persmission from your PI)
 1. Go to the RCPortal ([rcportal.psu.edu](https://rcportal.hpc.psu.edu/pun/sys/dashboard/)) and log in with your PSU credentials
 2. In the taskbar, click on "Jobs" and then "Job Composer"
 3. In the "Jobs" window, click "Edit Files" and upload the .csv, .py, and .sh files (may have to delete old .sh file)
