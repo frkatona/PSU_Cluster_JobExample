@@ -26,20 +26,38 @@ Each needs uploaded to the cluster through the portal to submit the job.  Step-b
 
 ## Details and Documentation
 
-- SLURM is used to manage the job scheduling and resource allocation on the cluster.
-  - [SLURM Documentation](https://slurm.schedmd.com/documentation.html)
+SLURM is used to manage the job scheduling and resource allocation on the cluster ([documentation here](https://slurm.schedmd.com/documentation.html))
 
-- SLURM batch script breakdown:
-  - #!/bin/bash : specifies the shell the system should use (bash here)
+### SLURM batch script breakdown:
+  
+  ```bash
+  #!/bin/bash
+  #SBATCH --job-name=APK_jobTest
+  #SBATCH --output=output_%j.txt
+  #SBATCH --error=error_%j.txt
+  #SBATCH --time=01:00:00
+  #SBATCH --mail-type=BEGIN,END,FAIL
+  #SBATCH --mail-user=apk5101@psu.edu
+  module load anaconda/2023.09
+  echo "Starting job at $(date)"
+  python analyze_data.py
+  echo "Job finished at $(date)"
+  ```
+
+- #!/bin/bash : specifies the shell the system should use (bash here)
 - #SBATCH : specifies the options for the job scheduler including number of nodes/tasks/CPUs-per-task, the time limit, and where to send the output/error
 - "%j" : the job ID
 - "--mail-type=BEGIN,END,FAIL" : send an email when the job starts, ends, or fails
 
-the email includes an "exit code"
+### email notification information
 
-- 0 : successful completion
-- 1 : generic failure
-- 2 : invalid usage (shell syntax error)
+- unique job id
+- job name
+- run time
+- exit code
+  - 0 : successful completion
+  - 1 : generic failure
+  - 2 : invalid usage (shell syntax error)
 
 ## To-do
 
