@@ -6,6 +6,8 @@ This example includes 3 components:
 2. Python script that models data from the CSV and reports the results
 3. Bash script that handles resource allocation, job submission, result exporting, and user notification
 
+![Example](exampleData.png)
+
 ## Usage
 
 1. Go to the RCPortal ([rcportal.psu.edu](https://rcportal.hpc.psu.edu/pun/sys/dashboard/)) and log in with your PSU credentials
