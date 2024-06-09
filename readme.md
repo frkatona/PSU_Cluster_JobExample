@@ -4,7 +4,7 @@ This is a brief demo of offloading scripts to the Penn State Roar Collab HPC clu
 
 ### example results read from the portal browser interface
 
-![results](images/exampleData.png)
+![results](images/ExampleData.png)
 
 To try on your own with this example, three files are included here:
 
