@@ -1,12 +1,18 @@
 # PSU Roar Collab HPC Example Files for Job Submission
 
-This example includes 3 components:
+This is a brief demo of offloading scripts to the Penn State Roar Collab HPC cluster.  The example is simple but long-running and computationally expensive scripts are the target use case.  Through the portal, users can submit jobs, monitor progress, and read results.
+
+### example results read from the portal browser interface
+
+![results](exampleData.png)
+
+Three components are included:
 
 1. CSV file of data
 2. Python script that models data from the CSV and reports the results
-3. Bash script that handles resource allocation, job submission, result exporting, and user notification
+3. Bash script that handles cluster resource allocation, job submission, results exporting, and user notification
 
-![Example](exampleData.png)
+Each needs uploaded to the cluster through the portal to submit the job.  Step-by-step details are included below.
 
 ## Usage
 
@@ -44,8 +50,8 @@ the email includes an "exit code"
 
 ## To-do
 
-- [ ] figure out how to deal with python libraries in the job script (just make sure they're installed on the cluster for my account?  import them as modules with the bash script?)
+- [x] find python library import methods (for now importing conda in the batch seems fine)
+
+- [ ] surely there must be a way to avoid the CRLF issue with the .sh file (maybe a setting in the portal? or a way to convert the file to LF in the portal?).  Git automatically converts to CRLF on Windows, so it's a pain to have to convert it back to LF every time
 
 - [ ] if a job does not complete before the time limit, do the output and error files still get made or should the script account for this possibility by routinely updating its progress and be coded such that it can resume from where it left off?
-
-- [ ] if I load a required module in the bash script, will it be available to the python script?  And does it stay loaded until deallocation?
