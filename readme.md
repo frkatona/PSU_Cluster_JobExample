@@ -4,7 +4,7 @@ This is a brief demo of offloading scripts to the Penn State Roar Collab HPC clu
 
 ### example results read from the portal browser interface
 
-![results](exampleData.png)
+![results](images/exampleData.png)
 
 To try on your own with this example, three files are included here:
 
@@ -23,6 +23,12 @@ Each needs uploaded to the cluster through the portal to submit the job.  Step-b
 4. Return to the job composer and click "Submit"
 5. Wait for email notification of job completion
 6. Open the file manager to view or download any output and error files
+
+### Finding The Job Composer
+![job composer](images/JobComposter.png)
+
+### Drag and Drop File Upload
+![drag and drop](images/DragAndDrop.png)
 
 ## Details and Documentation
 
@@ -58,6 +64,12 @@ SLURM is used to manage the job scheduling and resource allocation on the cluste
   - 0 : successful completion
   - 1 : generic failure
   - 2 : invalid usage (shell syntax error)
+
+### open queue service
+
+Free use is a part of the open queue tier of the Roar Collab Cluster found here ([ICDS Service Details](https://www.icds.psu.edu/service-details/)) which lists the following features/limits:
+
+![open queue](images/OpenQueueDetails.png)
 
 ## To-do
 
