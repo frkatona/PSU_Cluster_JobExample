@@ -16,7 +16,7 @@ Each needs uploaded to the cluster through the portal to submit the job.  Step-b
 
 ## Usage
 
-0. Request an account on the Roar Collab HPC with the o[online form](https://accounts.aci.ics.psu.edu/users/) (it will request persmission from your PI)
+0. Request an account on the Roar Collab HPC with the [online form](https://accounts.aci.ics.psu.edu/users/) (it will request persmission from your PI)
 1. Go to the  ([RCPortal page](https://rcportal.hpc.psu.edu/pun/sys/dashboard/)) and log in with your PSU credentials
 2. In the taskbar, click on "Jobs" and then "Job Composer"
 3. In the "Jobs" window, click "Edit Files" and upload the .csv, .py, and .sh files (can drag and drop but there is no warning of overwriting existing files, so be careful)
@@ -73,10 +73,10 @@ Free use is a part of the open queue tier of the Roar Collab Cluster found here 
 
 ## To-do and Lingering Questions
 
-- [x] find python library import methods (for now importing conda in the batch seems fine)
+- [x] find python library import methods (edit: for now importing conda in the batch seems fine)
+
+- [x] how does the wall time limit interact with SSH tasks? (doesn't appear as an interactive so probably full 48h but I've yet to experience a job not being preempted in less than 2 hours)
+
+- [x] if a job does not complete before the time limit, do the output and error files still get made or should the script account for this possibility by routinely updating its progress and be coded such that it can resume from where it left off? (edit: it seems like routine dumping of progress is the most likely solution, but pickling seems promising)
 
 - [ ] surely there must be a way to avoid the CRLF line break error that arises sometimes for the .sh file (maybe a setting in the portal? or a way to convert the file to LF in the portal?).  Git automatically converts to CRLF on Windows and it seems like the portal uses CRLF by default
-
-- [ ] if a job does not complete before the time limit, do the output and error files still get made or should the script account for this possibility by routinely updating its progress and be coded such that it can resume from where it left off?
-
-- [ ] how does the wall time limit interact with SSH tasks?
