@@ -16,8 +16,8 @@ Each needs uploaded to the cluster through the portal to submit the job.  Step-b
 
 ## Usage
 
-0. Request an account on the Roar Collab HPC with the online form (it will request persmission from your PI)
-1. Go to the RCPortal ([rcportal.psu.edu](https://rcportal.hpc.psu.edu/pun/sys/dashboard/)) and log in with your PSU credentials
+0. Request an account on the Roar Collab HPC with the o[online form](https://accounts.aci.ics.psu.edu/users/) (it will request persmission from your PI)
+1. Go to the  ([RCPortal page](https://rcportal.hpc.psu.edu/pun/sys/dashboard/)) and log in with your PSU credentials
 2. In the taskbar, click on "Jobs" and then "Job Composer"
 3. In the "Jobs" window, click "Edit Files" and upload the .csv, .py, and .sh files (can drag and drop but there is no warning of overwriting existing files, so be careful)
 4. Return to the job composer and click "Submit"
@@ -71,10 +71,12 @@ Free use is a part of the open queue tier of the Roar Collab Cluster found here 
 
 ![open queue](images/OpenQueueDetails.png)
 
-## To-do
+## To-do and Lingering Questions
 
 - [x] find python library import methods (for now importing conda in the batch seems fine)
 
 - [ ] surely there must be a way to avoid the CRLF line break error that arises sometimes for the .sh file (maybe a setting in the portal? or a way to convert the file to LF in the portal?).  Git automatically converts to CRLF on Windows and it seems like the portal uses CRLF by default
 
 - [ ] if a job does not complete before the time limit, do the output and error files still get made or should the script account for this possibility by routinely updating its progress and be coded such that it can resume from where it left off?
+
+- [ ] how does the wall time limit interact with SSH tasks?
