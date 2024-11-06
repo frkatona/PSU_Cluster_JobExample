@@ -1,6 +1,6 @@
 # PSU Roar Collab HPC Example Files for Job Submission
 
-This is a brief demo of offloading scripts to the Penn State Roar Collab HPC cluster.  The example is simple but long-running and computationally expensive scripts are the target use case.  Through the portal, users can submit jobs, monitor progress, and read results.
+This is a brief demo of offloading scripts to the Penn State Roar Collab HPC cluster.  The example is simple, but long-running and computationally expensive scripts are the target use case.  Through the portal, users can submit jobs, monitor progress, and read results.
 
 ### example results read from the portal browser interface
 
